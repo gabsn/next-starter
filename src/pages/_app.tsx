@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import "normalize.css";
 
 // Style basic elements globally
-import "@/styles/globals.css";
+import "./_app.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
