@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
 
-export const H1: React.FC = ({ children}) => (
+export const H1: React.FC = ({ children }) => (
   <>
-    <h1>
-      {children}
-    </h1>
+    <h1>{children}</h1>
     <style jsx>
       {`
         h1 {
