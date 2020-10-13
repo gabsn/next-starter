@@ -7,7 +7,11 @@ export default async function ip(req: NextApiRequest, res: NextApiResponse) {
   const ip = getClientIp(req);
   const isGoogleIp = await _isGoogleIp(ip);
   const hostnames = await reverse(ip);
-  res.json({ ip, isGoogleIp, hostnames });
+  let address = "hostnames length === 0";
+  if (hostnames.length > 0) {
+    address = await lookup(hostnames[0]);
+  }
+  res.json({ ip, isGoogleIp, hostnames, address });
 }
 
 // https://support.google.com/webmasters/answer/80553

@@ -21,6 +21,7 @@ const IsGoogle = () => {
           : `${data.ip} ip is not from Google`}
       </p>
       <p>{`Hostnames: ${data.hostnames}`}</p>
+      <p>{`Address: ${data.address}`}</p>
     </div>
   );
 };
