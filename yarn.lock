@@ -6053,18 +6053,6 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tldts-core@^5.6.59:
-  version "5.6.59"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-5.6.59.tgz#b2bd595b835b589674c1a5df7280c35edbb2af8c"
-  integrity sha512-yJeZp/4rfuh1baZqnZ8bqnmGmfZTwkngOUMvSRQV0ovBk/Ve7ql1fmfrgWzNgBf+kEraDNveQT/Jz0MaMwb5NQ==
-
-tldts@^5.6.59:
-  version "5.6.59"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-5.6.59.tgz#1a21db2f8056b01627c5a4b342c58e0a2aa9fc65"
-  integrity sha512-ERfI+IMduEiPXAA9HocpTxWgbjNio1poNpXuX0Hn8QIGnaWnRok7hf+g4kox3Iu3OaEsotq3IXh5Z2MaxDYL7g==
-  dependencies:
-    tldts-core "^5.6.59"
-
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"

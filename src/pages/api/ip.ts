@@ -1,17 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { getClientIp } from "request-ip";
 import dns from "dns";
-import { parse } from "tldts";
 
 export default async function ip(req: NextApiRequest, res: NextApiResponse) {
   const ip = getClientIp(req);
   const isGoogleIp = await _isGoogleIp(ip);
   const hostnames = await reverse(ip);
-  let address = "hostnames length === 0";
-  if (hostnames.length > 0) {
-    address = await lookup(hostnames[0]);
-  }
-  res.json({ ip, isGoogleIp, hostnames, address });
+  res.json({ ip, isGoogleIp, hostnames });
 }
 
 // https://support.google.com/webmasters/answer/80553
@@ -26,8 +21,8 @@ const _isGoogleIp = async (ip: string) => {
     return false;
   }
 
-  const address = await lookup(hostname);
-  return address === ip;
+  const resolvedIp = await lookup(hostname);
+  return resolvedIp === ip;
 };
 
 async function lookup(hostname: string): Promise<string> {

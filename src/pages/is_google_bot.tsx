@@ -2,29 +2,36 @@ import { useEffect, useState } from "react";
 import useFetch from "use-http";
 
 const IsGoogle = () => {
-  const [userAgent, setUserAgent] = useState(null);
-  useEffect(() => {
-    setUserAgent(navigator.userAgent);
-  }, []);
-  const { data } = useFetch("/api/ip", {}, []);
-  if (!userAgent || !data) return null;
-  console.log({ data });
+  const { isGoogle, reason } = useGoogleBot();
   return (
     <div>
-      <p>
-        {userAgent.includes("Googlebot")
-          ? `User agent ${userAgent} from Googlebot`
-          : `User agent ${userAgent} not from Googlebot`}
-      </p>
-      <p>
-        {data.isGoogleIp
-          ? `${data.ip} is from Google`
-          : `${data.ip} ip is not from Google`}
-      </p>
-      <p>{`Hostnames: ${data.hostnames}`}</p>
-      <p>{`Address: ${data.address}`}</p>
+      <p>{isGoogle ? "You are Google." : "You are not Google."}</p>
+      <p>Verification method: {reason}</p>
     </div>
   );
 };
 
 export default IsGoogle;
+
+const useGoogleBot = () => {
+  const [userAgent, setUserAgent] = useState(null);
+
+  useEffect(() => {
+    setUserAgent(navigator.userAgent);
+  }, []);
+
+  const { loading, data } = useFetch("/api/ip", {}, []);
+
+  if (!userAgent) {
+    return { isGoogle: false, reason: "No User-Agent" };
+  }
+
+  if (loading || !data) {
+    return {
+      isGoogle: userAgent.includes("Googlebot"),
+      reason: "User-Agent",
+    };
+  }
+
+  return { isGoogle: data.isGoogleIp, reason: "Reverse DNS lookup" };
+};
