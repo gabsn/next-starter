@@ -8,6 +8,7 @@ const IsGoogle = () => {
   }, []);
   const { data } = useFetch("/api/ip", {}, []);
   if (!userAgent || !data) return null;
+  console.log({ data });
   return (
     <div>
       <p>

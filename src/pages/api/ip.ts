@@ -22,7 +22,7 @@ const _isGoogleIp = async (ip: string) => {
   }
 
   const hostname = hostnames[0];
-  if (!hostname.endsWith("googlebot.com") || !hostname.endsWith("google.com")) {
+  if (!hostname.endsWith("googlebot.com") && !hostname.endsWith("google.com")) {
     return false;
   }
 
