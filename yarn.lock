@@ -6053,6 +6053,18 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tldts-core@^5.6.59:
+  version "5.6.59"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-5.6.59.tgz#b2bd595b835b589674c1a5df7280c35edbb2af8c"
+  integrity sha512-yJeZp/4rfuh1baZqnZ8bqnmGmfZTwkngOUMvSRQV0ovBk/Ve7ql1fmfrgWzNgBf+kEraDNveQT/Jz0MaMwb5NQ==
+
+tldts@^5.6.59:
+  version "5.6.59"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-5.6.59.tgz#1a21db2f8056b01627c5a4b342c58e0a2aa9fc65"
+  integrity sha512-ERfI+IMduEiPXAA9HocpTxWgbjNio1poNpXuX0Hn8QIGnaWnRok7hf+g4kox3Iu3OaEsotq3IXh5Z2MaxDYL7g==
+  dependencies:
+    tldts-core "^5.6.59"
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -6360,6 +6372,25 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+urs@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/urs/-/urs-0.0.7.tgz#2dbf320a68a54bbd67ab9c5ac103b0f2227ca6be"
+  integrity sha512-NDwuby5BP7D60RjHlow8Gch4yfglLdCpZagGeVDZNcL+jsA2v6RcBhPTJraqq1oQ1U3LT1bQfgmwgNUUIFht+g==
+
+use-http@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/use-http/-/use-http-1.0.15.tgz#c30c79f41583d9601dc074aee8750317a99231a3"
+  integrity sha512-Gw0QyPELU9Zkr7oQrMDNfseWbBnNnzimG8H4jtLwjI9ZwdiCDOfUO4D4puFG92HIcTIRKnT7P0KsbqO8uMGbrg==
+  dependencies:
+    urs "^0.0.7"
+    use-ssr "^1.0.22"
+    utility-types "^3.10.0"
+
+use-ssr@^1.0.22:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/use-ssr/-/use-ssr-1.0.23.tgz#3bde1e10cd01b3b61ab6386d7cddb72e74828bf8"
+  integrity sha512-5bvlssgROgPgIrnILJe2mJch4e2Id0/bVm1SQzqvPvEAXmlsinCCVHWK3a2iHcPat7PkdJHBo0gmSmODIz6tNA==
+
 use-subscription@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.4.1.tgz#edcbcc220f1adb2dd4fa0b2f61b6cc308e620069"
@@ -6390,6 +6421,11 @@ util@^0.11.0:
   integrity sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
   dependencies:
     inherits "2.0.3"
+
+utility-types@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.10.0.tgz#ea4148f9a741015f05ed74fd615e1d20e6bed82b"
+  integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
